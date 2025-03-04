@@ -168,7 +168,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\GLA Project Final\\HelloGreetingApplication\\ModelLayer\\ModelLayer.csproj": {
+                "projectPath": "D:\\GLA Project Final\\HelloGreetingApplication\\ModelLayer\\ModelLayer.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

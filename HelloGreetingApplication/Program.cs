@@ -1,5 +1,9 @@
+using BusinessLayer.Interface;
+using BusinessLayer.Service;
 using NLog;
 using NLog.Web;
+using RepositoryLayer.Interface;
+using RepositoryLayer.Service;
 
 var logger = LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
 try
@@ -11,6 +15,9 @@ try
     // Add services to the container.
     builder.Logging.ClearProviders();
     builder.Host.UseNLog();
+
+    builder.Services.AddScoped<IGreetingBL, GreetingBL>();
+    builder.Services.AddScoped<IGreetingRL, GreetingRL>();
 
     // Add swagger
     builder.Services.AddControllers();
