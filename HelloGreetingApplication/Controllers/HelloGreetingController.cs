@@ -18,6 +18,30 @@ namespace HelloGreetingApplication.Controllers
             _logger = logger;
             _greetingBL = greetingBL;
         }
+        [HttpGet("greeting3")]
+        public IActionResult GetGreetingMessage(string? firstName, string? lastName)
+        {
+            UserModel userModel = new UserModel
+            {
+                FirstName = firstName ?? string.Empty,
+                LastName = lastName ?? string.Empty
+            };
+
+            _logger.LogInformation($"Get request received with Firstname: {userModel.FirstName}, Lastname: {userModel.LastName}");
+
+            string message = _greetingBL.GetGreetingMessage(userModel); // Pass UserModel instead of separate params
+
+            ResponseModel<string> responseModel = new ResponseModel<string>()
+            {
+                Success = true,
+                Message = "Greet Message generated Successfully",
+                Data = message
+            };
+
+            return Ok(responseModel);
+        }
+
+        
         [HttpGet]
         [Route("greeting1")]
         public IActionResult GetMessage()
@@ -32,7 +56,7 @@ namespace HelloGreetingApplication.Controllers
             return Ok(responseModel);
         }
         [HttpGet]
-        [Route("Greeting")]
+        [Route("Greeting2")]
 
         public IActionResult Greeting()
         {
@@ -43,7 +67,7 @@ namespace HelloGreetingApplication.Controllers
         /// Get method to get the Greeting Message
         /// </summary>
         /// <returns>"Hello World!"</returns>
-        [HttpGet]
+        [HttpGet("greeting4")]
 
         public IActionResult Get()
         {

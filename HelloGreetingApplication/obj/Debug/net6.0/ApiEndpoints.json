@@ -1,16 +1,6 @@
 [
   {
     "ContainingType": "HelloGreetingApplication.Controllers.HelloGreetingController",
-    "Method": "Get",
-    "RelativePath": "HelloGreeting",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "HelloGreetingApplication.Controllers.HelloGreetingController",
     "Method": "Post",
     "RelativePath": "HelloGreeting",
     "HttpMethod": "POST",
@@ -69,8 +59,8 @@
   },
   {
     "ContainingType": "HelloGreetingApplication.Controllers.HelloGreetingController",
-    "Method": "Greeting",
-    "RelativePath": "HelloGreeting/Greeting",
+    "Method": "GetMessage",
+    "RelativePath": "HelloGreeting/greeting1",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -79,8 +69,39 @@
   },
   {
     "ContainingType": "HelloGreetingApplication.Controllers.HelloGreetingController",
-    "Method": "GetMessage",
-    "RelativePath": "HelloGreeting/greeting1",
+    "Method": "Greeting",
+    "RelativePath": "HelloGreeting/Greeting2",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HelloGreetingApplication.Controllers.HelloGreetingController",
+    "Method": "GetGreetingMessage",
+    "RelativePath": "HelloGreeting/greeting3",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "firstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "lastName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HelloGreetingApplication.Controllers.HelloGreetingController",
+    "Method": "Get",
+    "RelativePath": "HelloGreeting/greeting4",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

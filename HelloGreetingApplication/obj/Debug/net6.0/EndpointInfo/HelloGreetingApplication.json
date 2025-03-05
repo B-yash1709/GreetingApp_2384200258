@@ -5,6 +5,34 @@
     "version": "1.0"
   },
   "paths": {
+    "/HelloGreeting/greeting3": {
+      "get": {
+        "tags": [
+          "HelloGreeting"
+        ],
+        "parameters": [
+          {
+            "name": "firstName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "lastName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/HelloGreeting/greeting1": {
       "get": {
         "tags": [
@@ -17,7 +45,19 @@
         }
       }
     },
-    "/HelloGreeting/Greeting": {
+    "/HelloGreeting/Greeting2": {
+      "get": {
+        "tags": [
+          "HelloGreeting"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/HelloGreeting/greeting4": {
       "get": {
         "tags": [
           "HelloGreeting"
@@ -30,16 +70,6 @@
       }
     },
     "/HelloGreeting": {
-      "get": {
-        "tags": [
-          "HelloGreeting"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
       "post": {
         "tags": [
           "HelloGreeting"

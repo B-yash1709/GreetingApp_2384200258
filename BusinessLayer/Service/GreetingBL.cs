@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RepositoryLayer.Interface;
+using ModelLayer.Model;
 namespace BusinessLayer.Service
 {
     public class GreetingBL : IGreetingBL
@@ -22,7 +23,11 @@ namespace BusinessLayer.Service
 
             return result;
         }
+       public string GetGreetingMessage(UserModel user)
+        {
+            return _greetingRL.PrintHelloWorldWithName(user);
+        }
 
-        
+
     }
 }
