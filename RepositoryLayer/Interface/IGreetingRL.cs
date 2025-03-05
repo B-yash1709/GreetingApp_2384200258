@@ -11,5 +11,6 @@ namespace RepositoryLayer.Interface
     {
         public string PrintHelloWorld();
         string PrintHelloWorldWithName(UserModel user);
+        GreetingEntity SaveGreeting(string message);
     }
 }

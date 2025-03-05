@@ -1,7 +1,9 @@
 using BusinessLayer.Interface;
 using BusinessLayer.Service;
+using Microsoft.EntityFrameworkCore;
 using NLog;
 using NLog.Web;
+using RepositoryLayer.Context;
 using RepositoryLayer.Interface;
 using RepositoryLayer.Service;
 
@@ -11,6 +13,8 @@ try
     logger.Info("Application is starting...");
 
     var builder = WebApplication.CreateBuilder(args);
+    // Register Repository
+    builder.Services.AddScoped<IGreetingRL, GreetingRL>();
 
     // Add services to the container.
     builder.Logging.ClearProviders();
@@ -18,6 +22,10 @@ try
 
     builder.Services.AddScoped<IGreetingBL, GreetingBL>();
     builder.Services.AddScoped<IGreetingRL, GreetingRL>();
+    // Add Database Context
+    builder.Services.AddDbContext<HelloGreetingDbContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+    );
 
     // Add swagger
     builder.Services.AddControllers();

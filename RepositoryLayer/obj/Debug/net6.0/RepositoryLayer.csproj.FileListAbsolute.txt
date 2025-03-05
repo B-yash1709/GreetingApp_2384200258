@@ -13,3 +13,5 @@ D:\GLA Project Final\HelloGreetingApplication\RepositoryLayer\bin\Debug\net6.0\M
 D:\GLA Project Final\HelloGreetingApplication\RepositoryLayer\bin\Debug\net6.0\ModelLayer.pdb
 D:\GLA Project Final\HelloGreetingApplication\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.csproj.AssemblyReference.cache
 D:\GLA Project Final\HelloGreetingApplication\RepositoryLayer\obj\Debug\net6.0\Reposito.A0A61804.Up2Date
+D:\GLA Project Final\HelloGreetingApplication\RepositoryLayer\bin\Debug\net6.0\RepositoryLayer.runtimeconfig.json
+D:\GLA Project Final\HelloGreetingApplication\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.genruntimeconfig.cache

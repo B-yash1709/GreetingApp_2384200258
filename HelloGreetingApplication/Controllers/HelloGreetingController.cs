@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ModelLayer.Model;
 using BusinessLayer.Interface;
+using RepositoryLayer.Interface;
 
 namespace HelloGreetingApplication.Controllers
 {
@@ -13,10 +14,12 @@ namespace HelloGreetingApplication.Controllers
     {
         private readonly IGreetingBL _greetingBL;
         private readonly ILogger<HelloGreetingController> _logger;
-        public HelloGreetingController(ILogger<HelloGreetingController> logger , IGreetingBL greetingBL)
+        private readonly IGreetingRL _greetingService;
+        public HelloGreetingController(ILogger<HelloGreetingController> logger , IGreetingBL greetingBL, IGreetingRL greetingService)
         {
             _logger = logger;
             _greetingBL = greetingBL;
+            _greetingService = greetingService;
         }
         [HttpGet("greeting3")]
         public IActionResult GetGreetingMessage(string? firstName, string? lastName)
@@ -77,6 +80,15 @@ namespace HelloGreetingApplication.Controllers
             responseModel.Message = "Hello endpoint hit API";
             responseModel.Data = "Hello World!";
             return Ok(responseModel);
+        }
+        [HttpPost("save")]
+        public IActionResult SaveGreeting([FromBody] string message)
+        {
+            if (string.IsNullOrWhiteSpace(message))
+                return BadRequest("Message cannot be empty!");
+
+            var savedGreeting = _greetingService.SaveGreeting(message);
+            return Ok(savedGreeting);
         }
         /// <summary>
         /// Post method to Add new object
