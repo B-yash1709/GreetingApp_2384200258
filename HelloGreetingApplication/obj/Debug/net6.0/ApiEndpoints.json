@@ -126,6 +126,16 @@
   },
   {
     "ContainingType": "HelloGreetingApplication.Controllers.HelloGreetingController",
+    "Method": "GetAllGreetings",
+    "RelativePath": "HelloGreeting/list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HelloGreetingApplication.Controllers.HelloGreetingController",
     "Method": "SaveGreeting",
     "RelativePath": "HelloGreeting/save",
     "HttpMethod": "POST",

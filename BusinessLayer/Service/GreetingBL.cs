@@ -27,10 +27,18 @@ namespace BusinessLayer.Service
         {
             return _greetingRL.PrintHelloWorldWithName(user);
         }
+        public GreetingEntity SaveGreeting(string message)
+        {
+            return _greetingRL.SaveGreeting(message);
+        }
 
         public GreetingEntity GetGreetingById(int id)
         {
             return _greetingRL.GetGreetingById(id);
+        }
+        public List<GreetingEntity> GetAllGreetings()
+        {
+            return _greetingRL.GetAllGreetings();
         }
 
     }

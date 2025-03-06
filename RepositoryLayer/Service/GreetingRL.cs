@@ -56,7 +56,10 @@ namespace RepositoryLayer.Service
         {
             return _context.Greetings.FirstOrDefault(g => g.Id == id);
         }
-
+        public List<GreetingEntity> GetAllGreetings()
+        {
+            return _context.Greetings.ToList();
+        }
 
     }
 }

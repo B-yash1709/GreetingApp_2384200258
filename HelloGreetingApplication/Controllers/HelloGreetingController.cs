@@ -14,12 +14,24 @@ namespace HelloGreetingApplication.Controllers
     {
         private readonly IGreetingBL _greetingBL;
         private readonly ILogger<HelloGreetingController> _logger;
-        private readonly IGreetingRL _greetingService;
-        public HelloGreetingController(ILogger<HelloGreetingController> logger , IGreetingBL greetingBL, IGreetingRL greetingService)
+        public HelloGreetingController(ILogger<HelloGreetingController> logger , IGreetingBL greetingBL )
         {
             _logger = logger;
             _greetingBL = greetingBL; 
-            _greetingService = greetingService;
+        }
+        /// <summary>
+        /// get method to return list of all saved msgs(UC6)
+        /// </summary>
+        /// <returns>list of all saved </returns>
+        [HttpGet("list")]
+        public IActionResult GetAllGreetings()
+        {
+            var greetings = _greetingBL.GetAllGreetings();
+            if (greetings == null || greetings.Count == 0)
+            {
+                return NotFound("No greetings found.");
+            }
+            return Ok(greetings);
         }
         /// <summary>
         /// Get method to give data according to the Id(UC5)
@@ -83,6 +95,10 @@ namespace HelloGreetingApplication.Controllers
             };
             return Ok(responseModel);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("Greeting2")]
 
@@ -117,7 +133,7 @@ namespace HelloGreetingApplication.Controllers
             if (string.IsNullOrWhiteSpace(message))
                 return BadRequest("Message cannot be empty!");
 
-            var savedGreeting = _greetingService.SaveGreeting(message);
+            var savedGreeting = _greetingBL.SaveGreeting(message);
             return Ok(savedGreeting);
         }
         /// <summary>

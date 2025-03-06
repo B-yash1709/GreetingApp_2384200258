@@ -13,6 +13,8 @@ namespace RepositoryLayer.Interface
         string PrintHelloWorldWithName(UserModel user);
         GreetingEntity SaveGreeting(string message);
         public GreetingEntity GetGreetingById(int id);
+        public List<GreetingEntity> GetAllGreetings();
+
 
     }
 }
