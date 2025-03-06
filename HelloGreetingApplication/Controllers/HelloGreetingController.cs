@@ -19,6 +19,17 @@ namespace HelloGreetingApplication.Controllers
             _logger = logger;
             _greetingBL = greetingBL; 
         }
+          // 6?? Edit an existing greeting message
+        [HttpPut("update/{id}")]
+        public ActionResult<GreetingEntity> UpdateGreeting(int id, [FromBody] string newMessage)
+        {
+            var updatedGreeting = _greetingBL.UpdateGreeting(id, newMessage);
+            if (updatedGreeting == null)
+            {
+                return NotFound($"Greeting with ID {id} not found.");
+            }
+            return Ok(updatedGreeting);
+        }
         /// <summary>
         /// get method to return list of all saved msgs(UC6)
         /// </summary>

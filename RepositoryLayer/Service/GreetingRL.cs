@@ -7,7 +7,7 @@ using RepositoryLayer.Interface;
 using ModelLayer.Model;
 using Microsoft.EntityFrameworkCore;
 using RepositoryLayer.Context;
-   
+
 namespace RepositoryLayer.Service
 {
     public class GreetingRL : IGreetingRL
@@ -34,7 +34,7 @@ namespace RepositoryLayer.Service
 
         public string PrintHelloWorld()
         {
-          return  "Hello World!";
+            return "Hello World!";
         }
         /// <summary>
         /// Database code implementation
@@ -60,6 +60,19 @@ namespace RepositoryLayer.Service
         {
             return _context.Greetings.ToList();
         }
+        public GreetingEntity UpdateGreeting(int id, string newMessage)
+        {
+            var greeting = _context.Greetings.FirstOrDefault(g => g.Id == id);
+            if (greeting != null)
+            {
+                greeting.Message = newMessage;
+                _context.SaveChanges();
+            }
+            return greeting;
 
+        }
+        
     }
+
 }
+
