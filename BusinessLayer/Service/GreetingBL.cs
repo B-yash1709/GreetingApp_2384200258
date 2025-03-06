@@ -28,6 +28,10 @@ namespace BusinessLayer.Service
             return _greetingRL.PrintHelloWorldWithName(user);
         }
 
+        public GreetingEntity GetGreetingById(int id)
+        {
+            return _greetingRL.GetGreetingById(id);
+        }
 
     }
 }

@@ -11,6 +11,8 @@ namespace BusinessLayer.Interface
     {
         string GetGreetingMessage(UserModel userModel);
         public string PrintHelloWorld();
-        
+        public GreetingEntity GetGreetingById(int id);
+
+
     }
 }

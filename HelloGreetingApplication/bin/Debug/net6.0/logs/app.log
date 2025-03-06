@@ -489,3 +489,146 @@ WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
 2025-03-05 15:35:31.9807 INFO Executed action HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication) in 39.6852ms
 2025-03-05 15:35:31.9807 INFO Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication)'
 2025-03-05 15:35:31.9807 INFO Request finished HTTP/2 POST https://localhost:7282/HelloGreeting/save application/json 6 - 200 - application/json;+charset=utf-8 42.4161ms
+2025-03-05 23:00:16.8050 INFO Application is starting...
+2025-03-05 23:00:18.5573 INFO Now listening on: https://localhost:7282
+2025-03-05 23:00:18.5661 INFO Now listening on: http://localhost:5174
+2025-03-05 23:00:18.6249 INFO Application started. Press Ctrl+C to shut down.
+2025-03-05 23:00:18.6249 INFO Hosting environment: Development
+2025-03-05 23:00:18.6249 INFO Content root path: D:\GLA Project Final\HelloGreetingApplication\HelloGreetingApplication\
+2025-03-05 23:00:20.9502 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger/index.html - -
+2025-03-05 23:00:21.4781 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger/index.html - - - 200 - text/html;charset=utf-8 531.9790ms
+2025-03-05 23:00:21.5315 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger/index.js - -
+2025-03-05 23:00:21.5315 INFO Request starting HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - -
+2025-03-05 23:00:21.5315 INFO Request starting HTTP/2 GET https://localhost:7282/_vs/browserLink - -
+2025-03-05 23:00:21.5369 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 5.5254ms
+2025-03-05 23:00:21.5369 INFO Request finished HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 12.2998ms
+2025-03-05 23:00:21.6827 INFO Request finished HTTP/2 GET https://localhost:7282/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 150.7797ms
+2025-03-05 23:00:21.7737 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger/v1/swagger.json - -
+2025-03-05 23:00:21.7853 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 11.6114ms
+2025-03-05 23:00:32.1435 INFO Request starting HTTP/2 GET https://localhost:7282/HelloGreeting/greeting4 - -
+2025-03-05 23:00:32.1630 INFO Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Get (HelloGreetingApplication)'
+2025-03-05 23:00:32.1922 INFO Route matched with {action = "Get", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication).
+2025-03-05 23:00:32.8017 INFO Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 23:00:32.8326 INFO Executed action HelloGreetingApplication.Controllers.HelloGreetingController.Get (HelloGreetingApplication) in 620.861ms
+2025-03-05 23:00:32.8326 INFO Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Get (HelloGreetingApplication)'
+2025-03-05 23:00:32.8509 INFO Request finished HTTP/2 GET https://localhost:7282/HelloGreeting/greeting4 - - - 200 - application/json;+charset=utf-8 707.4751ms
+2025-03-05 23:01:07.8682 INFO Request starting HTTP/2 POST https://localhost:7282/HelloGreeting/save application/json 13
+2025-03-05 23:01:07.8682 INFO Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication)'
+2025-03-05 23:01:07.9030 INFO Route matched with {action = "SaveGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SaveGreeting(System.String) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication).
+2025-03-05 23:01:08.8237 INFO Entity Framework Core 6.0.36 initialized 'HelloGreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+2025-03-05 23:01:10.2667 INFO Executed DbCommand (147ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Greetings] ([Message])
+VALUES (@p0);
+SELECT [Id]
+FROM [Greetings]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2025-03-05 23:01:10.4236 INFO Executing OkObjectResult, writing value of type 'ModelLayer.Model.GreetingEntity'.
+2025-03-05 23:01:10.4236 INFO Executed action HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication) in 2521.9932ms
+2025-03-05 23:01:10.4236 INFO Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication)'
+2025-03-05 23:01:10.4387 INFO Request finished HTTP/2 POST https://localhost:7282/HelloGreeting/save application/json 13 - 200 - application/json;+charset=utf-8 2570.4853ms
+2025-03-06 00:18:37.2923 INFO Application is starting...
+2025-03-06 00:18:38.4982 INFO Now listening on: https://localhost:7282
+2025-03-06 00:18:38.4982 INFO Now listening on: http://localhost:5174
+2025-03-06 00:18:38.5706 INFO Application started. Press Ctrl+C to shut down.
+2025-03-06 00:18:38.5706 INFO Hosting environment: Development
+2025-03-06 00:18:38.5706 INFO Content root path: D:\GLA Project Final\HelloGreetingApplication\HelloGreetingApplication\
+2025-03-06 00:18:40.1628 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger/index.html - -
+2025-03-06 00:18:40.6476 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger/index.html - - - 200 - text/html;charset=utf-8 489.6353ms
+2025-03-06 00:18:40.7178 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger/index.css - -
+2025-03-06 00:18:40.7178 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger/swagger-ui.css - -
+2025-03-06 00:18:40.7178 INFO Request starting HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - -
+2025-03-06 00:18:40.7178 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger/swagger-ui-bundle.js - -
+2025-03-06 00:18:40.7178 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger/index.js - -
+2025-03-06 00:18:40.7178 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger/swagger-ui-standalone-preset.js - -
+2025-03-06 00:18:40.7491 INFO Request starting HTTP/2 GET https://localhost:7282/_vs/browserLink - -
+2025-03-06 00:18:40.7491 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 41.3146ms
+2025-03-06 00:18:40.7663 INFO Request finished HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 48.4386ms
+2025-03-06 00:18:40.7663 INFO The file /swagger-ui.css was not modified
+2025-03-06 00:18:40.7663 INFO The file /swagger-ui-standalone-preset.js was not modified
+2025-03-06 00:18:40.7663 INFO The file /swagger-ui-bundle.js was not modified
+2025-03-06 00:18:40.7663 INFO The file /index.css was not modified
+2025-03-06 00:18:40.7663 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger/index.css - - - 304 - text/css 54.2931ms
+2025-03-06 00:18:40.7663 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger/swagger-ui-standalone-preset.js - - - 304 - application/javascript 52.2264ms
+2025-03-06 00:18:40.7663 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger/swagger-ui.css - - - 304 - text/css 54.3508ms
+2025-03-06 00:18:40.7663 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger/swagger-ui-bundle.js - - - 304 - application/javascript 53.7096ms
+2025-03-06 00:18:40.8636 INFO Request finished HTTP/2 GET https://localhost:7282/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 114.5255ms
+2025-03-06 00:18:41.0382 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger/v1/swagger.json - -
+2025-03-06 00:18:41.0506 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 12.4404ms
+2025-03-06 00:20:44.6496 INFO Request starting HTTP/2 POST https://localhost:7282/HelloGreeting/save application/json 6
+2025-03-06 00:20:44.6742 INFO Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication)'
+2025-03-06 00:20:44.7495 INFO Route matched with {action = "SaveGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SaveGreeting(System.String) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication).
+2025-03-06 00:20:48.5945 INFO Entity Framework Core 6.0.36 initialized 'HelloGreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+2025-03-06 00:20:51.2688 INFO Executed DbCommand (310ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Greetings] ([Message])
+VALUES (@p0);
+SELECT [Id]
+FROM [Greetings]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2025-03-06 00:20:51.6948 INFO Executing OkObjectResult, writing value of type 'ModelLayer.Model.GreetingEntity'.
+2025-03-06 00:20:51.7195 INFO Executed action HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication) in 6953.9213ms
+2025-03-06 00:20:51.7195 INFO Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication)'
+2025-03-06 00:20:51.7539 INFO Request finished HTTP/2 POST https://localhost:7282/HelloGreeting/save application/json 6 - 200 - application/json;+charset=utf-8 7104.2681ms
+2025-03-06 00:25:12.4149 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger/index.html - -
+2025-03-06 00:25:12.4429 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger/index.html - - - 200 - text/html;charset=utf-8 28.5353ms
+2025-03-06 00:25:12.5095 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger/index.js - -
+2025-03-06 00:25:12.5186 INFO Request starting HTTP/2 GET https://localhost:7282/_vs/browserLink - -
+2025-03-06 00:25:12.5186 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 9.4030ms
+2025-03-06 00:25:12.5186 INFO Request starting HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - -
+2025-03-06 00:25:12.5186 INFO Request finished HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 1.1707ms
+2025-03-06 00:25:12.5849 INFO Request finished HTTP/2 GET https://localhost:7282/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 66.2737ms
+2025-03-06 00:25:12.7596 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger/v1/swagger.json - -
+2025-03-06 00:25:12.7639 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 4.5578ms
+2025-03-06 11:21:06.3025 INFO Application is starting...
+2025-03-06 11:21:07.2814 INFO Now listening on: https://localhost:7282
+2025-03-06 11:21:07.2879 INFO Now listening on: http://localhost:5174
+2025-03-06 11:21:07.3334 INFO Application started. Press Ctrl+C to shut down.
+2025-03-06 11:21:07.3334 INFO Hosting environment: Development
+2025-03-06 11:21:07.3334 INFO Content root path: D:\GLA Project Final\HelloGreetingApplication\HelloGreetingApplication\
+2025-03-06 11:21:08.7792 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger/index.html - -
+2025-03-06 11:21:09.1518 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger/index.html - - - 200 - text/html;charset=utf-8 376.3828ms
+2025-03-06 11:21:09.2219 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger/index.js - -
+2025-03-06 11:21:09.2219 INFO Request starting HTTP/2 GET https://localhost:7282/_vs/browserLink - -
+2025-03-06 11:21:09.2219 INFO Request starting HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - -
+2025-03-06 11:21:09.2219 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 10.8282ms
+2025-03-06 11:21:09.2400 INFO Request finished HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 18.1332ms
+2025-03-06 11:21:09.4888 INFO Request finished HTTP/2 GET https://localhost:7282/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 266.8798ms
+2025-03-06 11:21:09.6100 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger/v1/swagger.json - -
+2025-03-06 11:21:09.6100 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 10.0019ms
+2025-03-06 11:21:29.9117 INFO Request starting HTTP/2 GET https://localhost:7282/HelloGreeting/5 - -
+2025-03-06 11:21:29.9193 INFO Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingById (HelloGreetingApplication)'
+2025-03-06 11:21:29.9505 INFO Route matched with {action = "GetGreetingById", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetGreetingById(Int32) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication).
+2025-03-06 11:21:31.1793 INFO Entity Framework Core 6.0.36 initialized 'HelloGreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+2025-03-06 11:21:32.6681 INFO Executed DbCommand (83ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [g].[Id], [g].[Message]
+FROM [Greetings] AS [g]
+WHERE [g].[Id] = @__id_0
+2025-03-06 11:21:32.7529 INFO Executing OkObjectResult, writing value of type 'ModelLayer.Model.GreetingEntity'.
+2025-03-06 11:21:32.7529 INFO Executed action HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingById (HelloGreetingApplication) in 2805.2322ms
+2025-03-06 11:21:32.7529 INFO Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingById (HelloGreetingApplication)'
+2025-03-06 11:21:32.7695 INFO Request finished HTTP/2 GET https://localhost:7282/HelloGreeting/5 - - - 200 - application/json;+charset=utf-8 2857.7690ms
+2025-03-06 11:21:41.8417 INFO Request starting HTTP/2 GET https://localhost:7282/HelloGreeting/4 - -
+2025-03-06 11:21:41.8417 INFO Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingById (HelloGreetingApplication)'
+2025-03-06 11:21:41.8417 INFO Route matched with {action = "GetGreetingById", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetGreetingById(Int32) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication).
+2025-03-06 11:21:41.9272 INFO Entity Framework Core 6.0.36 initialized 'HelloGreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+2025-03-06 11:21:41.9412 INFO Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [g].[Id], [g].[Message]
+FROM [Greetings] AS [g]
+WHERE [g].[Id] = @__id_0
+2025-03-06 11:21:41.9412 INFO Executing OkObjectResult, writing value of type 'ModelLayer.Model.GreetingEntity'.
+2025-03-06 11:21:41.9412 INFO Executed action HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingById (HelloGreetingApplication) in 98.5ms
+2025-03-06 11:21:41.9412 INFO Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingById (HelloGreetingApplication)'
+2025-03-06 11:21:41.9412 INFO Request finished HTTP/2 GET https://localhost:7282/HelloGreeting/4 - - - 200 - application/json;+charset=utf-8 100.9072ms
+2025-03-06 11:21:53.2556 INFO Request starting HTTP/2 GET https://localhost:7282/HelloGreeting/3 - -
+2025-03-06 11:21:53.2556 INFO Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingById (HelloGreetingApplication)'
+2025-03-06 11:21:53.2556 INFO Route matched with {action = "GetGreetingById", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetGreetingById(Int32) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication).
+2025-03-06 11:21:53.2937 INFO Entity Framework Core 6.0.36 initialized 'HelloGreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+2025-03-06 11:21:53.2937 INFO Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [g].[Id], [g].[Message]
+FROM [Greetings] AS [g]
+WHERE [g].[Id] = @__id_0
+2025-03-06 11:21:53.2937 INFO Executing OkObjectResult, writing value of type 'ModelLayer.Model.GreetingEntity'.
+2025-03-06 11:21:53.2937 INFO Executed action HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingById (HelloGreetingApplication) in 40.7371ms
+2025-03-06 11:21:53.2937 INFO Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingById (HelloGreetingApplication)'
+2025-03-06 11:21:53.2937 INFO Request finished HTTP/2 GET https://localhost:7282/HelloGreeting/3 - - - 200 - application/json;+charset=utf-8 42.0220ms

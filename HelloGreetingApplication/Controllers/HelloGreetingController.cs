@@ -18,9 +18,31 @@ namespace HelloGreetingApplication.Controllers
         public HelloGreetingController(ILogger<HelloGreetingController> logger , IGreetingBL greetingBL, IGreetingRL greetingService)
         {
             _logger = logger;
-            _greetingBL = greetingBL;
+            _greetingBL = greetingBL; 
             _greetingService = greetingService;
         }
+        /// <summary>
+        /// Get method to give data according to the Id(UC5)
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>gives data from the databse according to the Id</returns>
+        [HttpGet("{id}")]
+        public IActionResult GetGreetingById(int id)
+        {
+            var greeting = _greetingBL.GetGreetingById(id);
+            if (greeting == null)
+            {
+                return NotFound("Greeting not found");
+            }
+            return Ok(greeting);
+        }
+
+        /// <summary>
+        /// Get method to greet with names(UC3)
+        /// </summary>
+        /// <param name="firstName"></param>
+        /// <param name="lastName"></param>
+        /// <returns>hello world with name</returns>
         [HttpGet("greeting3")]
         public IActionResult GetGreetingMessage(string? firstName, string? lastName)
         {
@@ -43,7 +65,10 @@ namespace HelloGreetingApplication.Controllers
 
             return Ok(responseModel);
         }
-
+        /// <summary>
+        /// Get Method to print Just Hello World!(UC2)
+        /// </summary>
+        /// <returns>Hello World</returns>
         
         [HttpGet]
         [Route("greeting1")]
@@ -67,7 +92,7 @@ namespace HelloGreetingApplication.Controllers
             return Ok(new { Message = "Hello, World!" });
         }
         /// <summary>
-        /// Get method to get the Greeting Message
+        /// Get method to get the Greeting Message]
         /// </summary>
         /// <returns>"Hello World!"</returns>
         [HttpGet("greeting4")]
@@ -81,6 +106,11 @@ namespace HelloGreetingApplication.Controllers
             responseModel.Data = "Hello World!";
             return Ok(responseModel);
         }
+        /// <summary>
+        /// Post method to save data to the database(UC4)
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns>reflects the data that was entered in database in form of rows and columns</returns>
         [HttpPost("save")]
         public IActionResult SaveGreeting([FromBody] string message)
         {
