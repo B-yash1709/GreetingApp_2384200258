@@ -19,7 +19,22 @@ namespace HelloGreetingApplication.Controllers
             _logger = logger;
             _greetingBL = greetingBL; 
         }
-          // 6?? Edit an existing greeting message
+        /// <summary>
+        /// Delete Method to delete data from data base(UC8)
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns> delete the element </returns>
+        [HttpDelete("delete/{id}")]
+        public ActionResult DeleteGreeting(int id)
+        {
+            bool isDeleted = _greetingBL.DeleteGreeting(id);
+            if (!isDeleted)
+            {
+                return NotFound($"Greeting with ID {id} not found.");
+            }
+            return Ok($"Greeting with ID {id} has been deleted.");
+        }
+        // 6?? Edit an existing greeting message(UC7)
         [HttpPut("update/{id}")]
         public ActionResult<GreetingEntity> UpdateGreeting(int id, [FromBody] string newMessage)
         {

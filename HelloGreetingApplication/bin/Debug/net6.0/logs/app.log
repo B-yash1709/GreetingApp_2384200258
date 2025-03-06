@@ -795,3 +795,41 @@ SELECT @@ROWCOUNT;
 2025-03-06 21:01:47.9199 INFO Executed action HelloGreetingApplication.Controllers.HelloGreetingController.UpdateGreeting (HelloGreetingApplication) in 2133.0481ms
 2025-03-06 21:01:47.9259 INFO Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.UpdateGreeting (HelloGreetingApplication)'
 2025-03-06 21:01:47.9259 INFO Request finished HTTP/2 PUT https://localhost:7282/HelloGreeting/update/4 application/json 11 - 200 - application/json;+charset=utf-8 2180.1199ms
+2025-03-06 21:13:11.7905 INFO Application is starting...
+2025-03-06 21:13:13.0947 INFO Now listening on: https://localhost:7282
+2025-03-06 21:13:13.1019 INFO Now listening on: http://localhost:5174
+2025-03-06 21:13:13.1455 INFO Application started. Press Ctrl+C to shut down.
+2025-03-06 21:13:13.1455 INFO Hosting environment: Development
+2025-03-06 21:13:13.1455 INFO Content root path: D:\GLA Project Final\HelloGreetingApplication\HelloGreetingApplication\
+2025-03-06 21:13:14.6459 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger - -
+2025-03-06 21:13:14.8023 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger/index.html - -
+2025-03-06 21:13:14.9196 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger - - - 0 - - 277.0483ms
+2025-03-06 21:13:15.0346 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger/index.html - - - 200 - text/html;charset=utf-8 232.3124ms
+2025-03-06 21:13:15.1316 INFO Request starting HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - -
+2025-03-06 21:13:15.1316 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger/index.js - -
+2025-03-06 21:13:15.1316 INFO Request starting HTTP/2 GET https://localhost:7282/_vs/browserLink - -
+2025-03-06 21:13:15.1316 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 2.6201ms
+2025-03-06 21:13:15.1407 INFO Request finished HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 9.0263ms
+2025-03-06 21:13:15.2656 INFO Request finished HTTP/2 GET https://localhost:7282/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 133.4733ms
+2025-03-06 21:13:15.3281 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger/favicon-32x32.png - -
+2025-03-06 21:13:15.3532 INFO Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-03-06 21:13:15.3532 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger/favicon-32x32.png - - - 0 628 image/png 25.4414ms
+2025-03-06 21:13:15.4049 INFO Request starting HTTP/2 GET https://localhost:7282/Swagger/v1/swagger.json - -
+2025-03-06 21:13:15.4049 INFO Request finished HTTP/2 GET https://localhost:7282/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 10.1887ms
+2025-03-06 21:13:24.9986 INFO Request starting HTTP/2 DELETE https://localhost:7282/HelloGreeting/delete/6 - -
+2025-03-06 21:13:25.0060 INFO Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.DeleteGreeting (HelloGreetingApplication)'
+2025-03-06 21:13:25.0420 INFO Route matched with {action = "DeleteGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult DeleteGreeting(Int32) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication).
+2025-03-06 21:13:25.8629 INFO Entity Framework Core 6.0.36 initialized 'HelloGreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+2025-03-06 21:13:26.7153 INFO Executed DbCommand (62ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [g].[Id], [g].[Message]
+FROM [Greetings] AS [g]
+WHERE [g].[Id] = @__id_0
+2025-03-06 21:13:26.9101 INFO Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Greetings]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2025-03-06 21:13:26.9326 INFO Executing OkObjectResult, writing value of type 'System.String'.
+2025-03-06 21:13:26.9387 INFO Executed action HelloGreetingApplication.Controllers.HelloGreetingController.DeleteGreeting (HelloGreetingApplication) in 1891.4715ms
+2025-03-06 21:13:26.9387 INFO Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.DeleteGreeting (HelloGreetingApplication)'
+2025-03-06 21:13:26.9387 INFO Request finished HTTP/2 DELETE https://localhost:7282/HelloGreeting/delete/6 - - - 200 - text/plain;+charset=utf-8 1948.0894ms
