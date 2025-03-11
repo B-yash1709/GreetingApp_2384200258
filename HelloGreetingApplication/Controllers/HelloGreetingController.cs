@@ -14,11 +14,6 @@ namespace HelloGreetingApplication.Controllers
     {
         private readonly IGreetingBL _greetingBL;
         private readonly ILogger<HelloGreetingController> _logger;
-        public HelloGreetingController(ILogger<HelloGreetingController> logger , IGreetingBL greetingBL )
-        {
-            _logger = logger;
-            _greetingBL = greetingBL; 
-        }
         /// <summary>
         /// Delete Method to delete data from data base(UC8)
         /// </summary>

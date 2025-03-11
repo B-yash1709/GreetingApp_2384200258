@@ -6,6 +6,7 @@ using NLog.Web;
 using RepositoryLayer.Context;
 using RepositoryLayer.Interface;
 using RepositoryLayer.Service;
+using Review.Middleware;
 
 var logger = LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
 try
@@ -36,6 +37,16 @@ try
 
     app.UseSwagger();
     app.UseSwaggerUI();
+    // Exception Handling — Correct Order
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseDeveloperExceptionPage(); // Detailed error page for development
+    }
+    else
+    {
+        app.UseExceptionHandler("/error"); // Fallback for non-development environments
+    }
+    app.UseMiddleware<ExceptionMiddleware>();
 
     // Configure the HTTP request pipeline.
     app.UseHttpsRedirection();
